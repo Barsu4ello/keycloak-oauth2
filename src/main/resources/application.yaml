@@ -1,0 +1,10 @@
+server:
+  port: 8280
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #ссылка на сертификаты authserver для проверки целостоности accesstoken
+          jwk-set-uri: http://localhost:8180/realms/test-realm/protocol/openid-connect/certs
